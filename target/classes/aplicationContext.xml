@@ -17,7 +17,7 @@
 
     <bean id="myPerson"
           class="spring_introduction.IoCEx.Person">
-        <constructor-arg ref="myPet"/>
+        <property name="pet" ref="myPet"/>
     </bean>
 
 </beans>
