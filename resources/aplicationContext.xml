@@ -15,4 +15,9 @@
           class="spring_introduction.IoCEx.RockMusic">
     </bean>
 
+    <bean id="myPerson"
+          class="spring_introduction.IoCEx.Person">
+        <constructor-arg ref="myPet"/>
+    </bean>
+
 </beans>
