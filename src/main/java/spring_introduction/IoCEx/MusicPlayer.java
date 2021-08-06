@@ -1,13 +1,13 @@
-package spring_introduction;
+package spring_introduction.IoCEx;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test2 {
+public class MusicPlayer {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("aplicationContext.xml");
-        Pet pet = context.getBean("myPet", Pet.class);
-        pet.say();
+        Music musicPlayer = context.getBean("myMusic", Music.class);
+        musicPlayer.play();
         context.close();
     }
 }

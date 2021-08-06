@@ -1,4 +1,4 @@
-package spring_introduction;
+package spring_introduction.IoCEx;
 
 public class Test1 {
     public static void main(String[] args) {

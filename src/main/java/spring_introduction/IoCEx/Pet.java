@@ -1,4 +1,4 @@
-package spring_introduction;
+package spring_introduction.IoCEx;
 
 public interface Pet {
     public void say();
