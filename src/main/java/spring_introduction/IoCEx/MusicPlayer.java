@@ -3,11 +3,22 @@ package spring_introduction.IoCEx;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MusicPlayer {
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("aplicationContext.xml");
-        Music musicPlayer = context.getBean("myMusic", Music.class);
-        musicPlayer.play();
-        context.close();
+    private Music music;
+    private String group;
+
+    public Music getMusic() {
+        return music;
+    }
+
+    public void setMusic(Music music) {
+        this.music = music;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
     }
 }
