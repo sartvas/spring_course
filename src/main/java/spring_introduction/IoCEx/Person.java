@@ -1,19 +1,23 @@
 package spring_introduction.IoCEx;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
+    @Autowired
+    @Qualifier("hamsterBean")
     private Pet pet;
     private String surname;
     private int age;
 
-    @Autowired
-    public Person(Pet pet){
-        System.out.println("Person is created");
-        this.pet = pet;
-    }
+//    @Autowired
+//    public Person(Pet pet){
+//        System.out.println("Person is created");
+//        this.pet = pet;
+//    }
+
 
     public void setPet(Pet pet) {
         this.pet = pet;
