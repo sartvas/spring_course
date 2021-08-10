@@ -13,6 +13,8 @@ public class Test4ConfigAnnotations {
 
         Person person = context.getBean("personBean", Person.class);
         person.callPet();
+        System.out.println(person.getSurname());
+        System.out.println(person.getAge());
 
         context.close();
     }
