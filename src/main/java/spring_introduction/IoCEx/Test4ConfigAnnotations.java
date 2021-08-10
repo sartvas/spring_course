@@ -8,8 +8,12 @@ public class Test4ConfigAnnotations {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("aplicationContext4.xml");
 
-        Hamster hamster = context.getBean("hamster", Hamster.class);
-        hamster.say();
+//        Hamster hamster = context.getBean("hamsterBean", Hamster.class);
+//        hamster.say();
+
+        Person person = context.getBean("personBean", Person.class);
+        person.callPet();
+
         context.close();
     }
 }
